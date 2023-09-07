@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ShopRepositoryTest {
 
     @Test
-    public void testRemoveWhenProductExist (){
+    public void testRemoveWhenProductExist() {
         ShopRepository repo = new ShopRepository();
         Product product1 = new Product(11, "Телефон", 30_000);
         Product product2 = new Product(22, "Книга", 300);
@@ -26,7 +26,7 @@ class ShopRepositoryTest {
     }
 
     @Test
-    public void testRemoveWhenProductNotExist (){
+    public void testRemoveWhenProductNotExist() {
         ShopRepository repo = new ShopRepository();
         Product product1 = new Product(11, "Телефон", 30_000);
         Product product2 = new Product(22, "Книга", 300);
@@ -38,7 +38,7 @@ class ShopRepositoryTest {
 
         Assertions.assertThrows(NotFoundException.class,
                 () -> repo.remove(4444)
-                );
+        );
     }
 
 
